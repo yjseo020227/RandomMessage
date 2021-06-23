@@ -3,12 +3,20 @@
 //2) adverb 
 //3) noun 
 
-let lsPronoun = []; 
-let lsAdverb = [];
-let lsNoun = [];
+let lsPronoun = ["I", "You", "We"]; 
+let lsAdverb = ["really", "extremely"];
+let lsVerb = ["love","like", "hate", "despise", "feel ambivalent about"]
+let lsNoun = ["pizza", "pasta", "rissoto", "snails","kimchi stew", "korean barbeque", "beef", "pork" ];
 
 function randomNum(list){
     let l = list.length; 
-    const num = Math.floor(((Math.random()+1)*l))
+    const num = Math.floor((Math.random()*l))
     return num;
 }
+
+const p = lsPronoun[randomNum(lsPronoun)];
+const adv = lsAdverb[randomNum(lsAdverb)];
+const verb = lsVerb[randomNum(lsVerb)];
+const noun = lsNoun[randomNum(lsNoun)];
+
+console.log(`${p} ${adv} ${verb} ${noun}`);
